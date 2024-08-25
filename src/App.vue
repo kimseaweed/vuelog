@@ -37,14 +37,23 @@
   </div>
 </nav>
 
+<ListPage :posts="posts"/>
 
 </template>
 
 <script>
+import posts from './assets/posts';
+import ListPage from './components/ListPage.vue';
 
 export default {
   name: 'App',
+  data(){
+    return{
+      posts : posts,
+    }
+  },
   components: {
+    ListPage,
   }
 }
 </script>
